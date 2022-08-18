@@ -9,6 +9,12 @@ param actions array = [
                     'Microsoft.Storage/storageAccounts/blobServices/generateUserDelegationKey/action'
 ]
 
+param dataActions array = [
+  'Microsoft.Devices/IotHubs/*/read'
+  'Microsoft.Devices/IotHubs/fileUpload/notifications/action'
+  'Microsoft.EventHub/*'
+]
+
 @description('Array of notActions for the role definition')
 param notActions array = []
 
@@ -30,6 +36,7 @@ resource roleDef 'Microsoft.Authorization/roleDefinitions@2022-04-01' = {
       {
         actions: actions
         notActions: notActions
+        dataActions: dataActions
       }
     ]
     assignableScopes: [
