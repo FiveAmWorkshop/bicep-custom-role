@@ -22,6 +22,29 @@ param actions array = [
                     'Microsoft.Insights/MetricDefinitions/read'
                     'Microsoft.Insights/Metrics/read'
                     'Microsoft.Resources/subscriptions/resourceGroups/read'
+                    'Microsoft.Web/serverFarms/*/read'
+                    'Microsoft.DBForPostgreSql/*/read'
+                    'Microsoft.ContainerRegistry/registries/pull/read'
+                    'Microsoft.ContainerRegistry/registries/push/write'
+                    'Microsoft.CognitiveServices/*'
+                    'Microsoft.Features/features/read'
+                    'Microsoft.Features/providers/features/read'
+                    'Microsoft.Features/providers/features/register/action'
+                    'Microsoft.Insights/diagnosticSettings/*'
+                    'Microsoft.Insights/logDefinitions/read'
+                    'Microsoft.ResourceHealth/availabilityStatuses/read'
+                    'Microsoft.Resources/deployments/*'
+                    'Microsoft.Resources/deployments/operations/read'
+                    'Microsoft.Resources/subscriptions/operationresults/read'
+                    'Microsoft.Resources/subscriptions/read'
+                    'Microsoft.Resources/subscriptions/resourcegroups/deployments/*'
+                    'Microsoft.Resources/subscriptions/resourceGroups/read'
+                    'Microsoft.Databricks/*/read'
+                    'Microsoft.Synapse/*'
+	
+                    
+
+
 ]
 
 param dataActions array = [
