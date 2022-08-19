@@ -57,7 +57,7 @@ param notActions array = []
 @description('Friendly name of the role definition')
 param roleName string = 'Custom Role - Backend Engineer'
 
-@description('Detailed descrpition of the role definition')
+@description('Detailed description of the role definition')
 param roleDescription string = 'Custom role to show a notional backend engineer'
 
 var roleDefName = guid(subscription().id, string(actions), string(notActions))
