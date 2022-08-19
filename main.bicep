@@ -80,3 +80,19 @@ resource roleDef 'Microsoft.Authorization/roleDefinitions@2022-04-01' = {
     ]
   }
 }
+
+  @description('principalId if the user that will be given contributor access to the resourceGroup')
+  param principalId string
+
+  // this creates an idempotent GUID for the role assignment
+  var roleAssignmentName = guid(subscription().id, principalId, roleDef.id)
+
+  resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-08-01-preview' = {
+    name: roleAssignmentName
+    properties: {
+      roleDefinitionId: roleDef.id
+      principalId: principalId
+      principalType: 'Group'
+
+    }
+  }
