@@ -41,6 +41,7 @@ param actions array = [
                     'Microsoft.Resources/subscriptions/resourceGroups/read'
                     'Microsoft.Databricks/*/read'
                     'Microsoft.Synapse/*'
+                    'Microsoft.Web/sites/*/read'
 	
                     
 
